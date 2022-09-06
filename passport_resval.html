@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>passport form</title>
+    <link rel="stylesheet" href="/passport.css" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <script src="/passport_resval.js"></script> -->
+  </head>
+  <body>
+    <form  id="pass_port" action="/thankyou.html">
+      <div class="container" style="background-color: lightblue">
+        <div class="container-fluid">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12" style="float: right; font-weight: bold">
+                <p>File Number (For Office Use Only)</p>
+                <input name="t1" id="t1" type="text" size="25" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <h3
+                  class="text-justify"
+                  style="text-align: center; font-weight: bold"
+                >
+                  GOVERNMENT OF INDIA, MINISTRY OF EXTERNAL AFFAIRS <br />
+                  PASSPORT APPLICATION FORM
+                </h3>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <h3 class="text-justify" style="font-weight: bold">
+                  Please read the Passport Instruction Booklet carefully before
+                  filling the form.Fill this form in CAPITAL LETTERS using blue/
+                  black ink ball point pen only.Furnishing of incorrect
+                  information/ suppression of information would lead to
+                  rejection of the application and would attract penal
+                  provisions as prescribed under the Passports Act, 1967. Please
+                  produce your original documents at the time of submission of
+                  the form.
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3 style="font-weight: bold">1. Service Required</h3>
+            </div>
+            <div class="col-12">
+              <h3>1.1 Applying for</h3>
+              <label for="r1[]" class="error"></label>
+            </div>
+            <div class=".fresh">
+              <div class="col-md-3">
+                <p style="font-size: 18px">
+                  <input id="aa" name="r1[]" type="radio" onclick="final()" />
+                  Fresh Passport
+                </p>
+              </div>
+              <div class="col-md-3">
+                <p style="font-size: 18px">
+                  <input id="ab" name="r1[]" type="radio" onclick="final()" />
+                  Re-issue of Passport
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>1.2 If re-issue, specify reason(s)</h3>
+              <label for="r2[]" class="error"></label>
+            </div>
+            <div class="col-md-5">
+              <p style="font-size: 18px">
+                <input id="ac" name="r2[]" type="radio" onclick="final()" />
+                Validity Expired within 3 years/ DuetoExpire
+              </p>
+            </div>
+            <div class="col-md-5">
+              <p style="font-size: 18px">
+                <input id="ad" name="r2[]" type="radio" onclick="final()" />
+                Exhaustion of Pages
+              </p>
+            </div>
+            <div class="col-md-5">
+              <p style="font-size: 18px">
+                <input id="ae" name="r2[]" type="radio" onclick="final()" />
+                Validity Expired more than 3 years ago
+              </p>
+            </div>
+            <div class="col-md-5">
+              <p style="font-size: 18px">
+                <input id="af" name="r2[]" type="radio" onclick="final()" />
+                Lost Passport
+              </p>
+            </div>
+            <div class="col-md-5">
+              <p style="font-size: 18px">
+                <input id="ag" name="r2[]" type="radio" onclick="final()" />
+                Change in Existing Personal Particulars
+              </p>
+            </div>
+            <div class="col-md-5">
+              <p style="font-size: 18px">
+                <input id="ah" name="r2[]" type="radio" onclick="final()" />
+                Damaged Passport
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>
+                1.3 If change in existing personal particulars, specify
+                reason(s)
+              </h3>
+              <label for="c1[]" class="error"></label>
+            </div>
+            <div class=".check">
+              <div class="col-md-3">
+                <p style="font-size: 18px">
+                  <input id="ca" type="checkbox" name="c1[]" disabled />
+                  Appearance
+                </p>
+              </div>
+
+              <div class="col-md-3">
+                <p style="font-size: 18px">
+                  <input id="cb" type="checkbox" name="c1[]" disabled />
+                  Signature
+                </p>
+              </div>
+
+              <div class="col-md-3">
+                <p style="font-size: 18px">
+                  <input id="cc" type="checkbox" name="c1[]" disabled /> Given
+                  Name
+                </p>
+              </div>
+
+              <div class="col-md-3">
+                <p style="font-size: 18px">
+                  <input id="cd" type="checkbox" name="c1[]" disabled /> Surname
+                </p>
+              </div>
+
+              <div class="col-md-3">
+                <p style="font-size: 18px">
+                  <input id="ce" type="checkbox" name="c1[]" disabled /> Date of
+                  Birth
+                </p>
+              </div>
+
+              <div class="col-md-3">
+                <p style="font-size: 18px">
+                  <input id="cf" type="checkbox" name="c1[]" disabled /> Spouse
+                  Name
+                </p>
+              </div>
+
+              <div class="col-md-3">
+                <p style="font-size: 18px">
+                  <input id="cg" type="checkbox" name="c1[]" disabled /> Address
+                </p>
+              </div>
+
+              <div class="col-md-3">
+                <p style="font-size: 18px">
+                  <input id="ch" type="checkbox" name="c1[]" disabled /> Delete
+                  ECR
+                </p>
+              </div>
+
+              <div class="col-md-3">
+                <p style="font-size: 18px">
+                  <input
+                    id="ci"
+                    type="checkbox"
+                    name="c1[]"
+                    disabled
+                    onclick="final()"
+                  />
+                  Others, Please specify
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <input
+                class="form-control"
+                name="t2"
+                type="text"
+                id="t2"
+                disabled
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Upload your photo</h3>
+            </div>
+
+            <div class="col-md-5">
+              <input
+                class="form-control"
+                id="file"
+                type="file"
+                name="file"
+                size="40"
+              />
+            </div>
+
+            <div class="col-md-12">
+              <h3>Upload your signature</h3>
+            </div>
+
+            <div class="col-md-5">
+              <input
+                class="form-control"
+                name="sign"
+                id="sign"
+                type="file"
+                size="40"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>1.4 Type of Application</h3>
+              <label for="r3[]" class="error"></label>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input id="ba" name="r3[]" type="radio" /> Normal
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input id="bb" name="r3[]" type="radio" /> Tatkaal
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>1.5 Type of Passport Booklet</h3>
+              <label for="r4[]" class="error"></label>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input id="bc" name="r4[]" type="radio" /> 36 Pages
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input id="bd" name="r4[]" type="radio" /> 60 Pages
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>1.6 Validity Required</h3>
+              <p>(For minors between 15 and 18 years)</p>
+              <label for="r5[]" class="error"></label>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input id="be" name="r5[]" type="radio" /> Up to age 18
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input id="bf" name="r5[]" type="radio" /> 10 Years
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2. Applicant Details</h3>
+            </div>
+            <div class="col-md-12">
+              <h3>
+                2.1 Applicant's Given Name (Given Name means First name followed
+                by Middle name (If any))(Initials not allowed)
+              </h3>
+            </div>
+            <div class="col-md-5">
+              <input
+                class="form-control"
+                id="t3"
+                type="text"
+                size="40"
+                name="t3"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.2 Are you known by any other names (aliases)?</h3>
+              <p>If yes, provide details in Column 1 of Supplementary Form</p>
+              <label for="r6[]" class="error"></label>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input id="bg" name="r6[]" type="radio" /> Yes
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r6[]" id="bh" type="radio" /> No
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.3 Have you ever changed your name?</h3>
+              <p>If yes, provide details in Column 2 of Supplementary Form</p>
+              <label for="r7[]" class="error"></label>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input id="bi" name="r7[]" type="radio" /> Yes
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input id="bj" name="r7[]" type="radio" /> No
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.4 Date of Birth (DD-MM-YYYY)</h3>
+              <label for="date1[]" class="error"></label>
+            </div>
+            <div class="col-md-4">
+              <input
+                class="form-control"
+                id="date1"
+                type="date"
+                name="date1[]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.5 Place of Birth (Village or Town or City)</h3>
+            </div>
+
+            <div class="col-md-4">
+              <input
+                class="form-control"
+                id="t4"
+                type="text"
+                size="40"
+                name="t4"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.6 Gender</h3>
+              <label for="r8[]" class="error"></label>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r8[]" type="radio" /> Male
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r8[]" type="radio" /> Female
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r8[]" type="radio" /> Transgender
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.7 Marital Status</h3>
+              <label for="r9[]" class="error"></label>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r9[]" type="radio" /> Single
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r9[]" type="radio" /> Married
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r9[]" type="radio" /> Divorced
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r9[]" type="radio" /> Widow/ Widower
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r9[]" type="radio" /> Separated
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.8 Citizenship of India by</h3>
+              <label for="r10[]" class="error"></label>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r10[]" type="radio" /> Birth
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r10[]" type="radio" /> Descent
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r10[]" type="radio" /> Naturalization
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.9 PAN (If available)</h3>
+            </div>
+            <div class="col-md-4">
+              <input
+                class="form-control"
+                id="t5"
+                name="t5"
+                type="text"
+                size="40"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.10 Voter ID (If available)</h3>
+            </div>
+            <div class="col-md-4">
+              <input
+                class="form-control"
+                id="t6"
+                name="t6"
+                type="text"
+                size="40"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.11 Employment Type</h3>
+              <label for="c2[]" class="error"></label>
+            </div>
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input type="checkbox" name="c2[]" /> PSU
+              </p>
+            </div>
+
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input type="checkbox" name="c2[]" /> Government
+              </p>
+            </div>
+
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input type="checkbox" name="c2[]" /> Statutory Body
+              </p>
+            </div>
+
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input type="checkbox" name="c2[]" /> Retired Government Servant
+              </p>
+            </div>
+
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input type="checkbox" name="c2[]" /> Self Employed
+              </p>
+            </div>
+
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input type="checkbox" name="c2[]" /> Private
+              </p>
+            </div>
+
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input type="checkbox" name="c2[]" /> Homemaker
+              </p>
+            </div>
+
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input type="checkbox" name="c2[]" /> Not Employed
+              </p>
+            </div>
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input type="checkbox" name="c2[]" /> Retired-Private Service
+              </p>
+            </div>
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input type="checkbox" name="c2[]" /> Student
+              </p>
+            </div>
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input type="checkbox" name="c2[]" /> Others
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p style="font-size: 18px">
+                <input type="checkbox" name="c2[]" /> Owners, Partners &
+                Directors of companies which are members of CII, FICCI &
+                ASSOCHAM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>
+                2.12 If employed in Government/ Statutory Body/ PSU, specify
+                organization name
+              </h3>
+            </div>
+
+            <div class="col-md-4">
+              <input
+                class="form-control"
+                id="t7"
+                name="t7"
+                type="text"
+                size="40"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>
+                2.13 Is either of your parent (in case of minor)/ spouse, a
+                government servant?
+              </h3>
+              <label for="r11[]" class="error"></label>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r11[]" type="radio" /> Yes
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r11[]" type="radio" /> No
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.14 Educational Qualification</h3>
+              <label for="r12[]" class="error"></label>
+            </div>
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input name="r12[]" type="radio" /> 7th pass or less
+              </p>
+            </div>
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input name="r12[]" type="radio" /> Between 8th and 9th Standard
+              </p>
+            </div>
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input name="r12[]" type="radio" /> 10th pass and above
+              </p>
+            </div>
+            <div class="col-md-3">
+              <p style="font-size: 18px">
+                <input name="r12[]" type="radio" /> Graduate and above
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.15 Are you eligible for Non-ECR category?</h3>
+              <p>
+                For details, see Column 2.15, section B of Instruction Booklet
+              </p>
+              <label for="r13[]" class="error"></label>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r13[]" type="radio" /> Yes
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r13[]" type="radio" /> No
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.16 Visible Distinguishing Mark</h3>
+            </div>
+
+            <div class="col-md-4">
+              <input
+                class="form-control"
+                id="t8"
+                name="t8"
+                type="text"
+                size="40"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>2.17 Aadhaar Number</h3>
+            </div>
+
+            <div class="col-md-4">
+              <input
+                class="form-control"
+                id="t9"
+                name="t9"
+                type="text"
+                size="40"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="text-justify" class="row">
+            <div class="col-12">
+              <h3>3. Family Details</h3>
+            </div>
+            <div class="col-md-12">
+              <h3>
+                3.1 Father's Given Name (Given Name means First name followed by
+                Middle name (If any)) (Initials not allowed)
+              </h3>
+            </div>
+            <div class="col-md-5">
+              <input
+                class="form-control"
+                id="t10"
+                name="t10"
+                type="text"
+                size="40"
+              />
+            </div>
+
+            <div class="col-md-12">
+              <h3>
+                3.2 Mother's Given Name (Given Name means First name followed by
+                Middle name (If any)) (Initials not allowed)
+              </h3>
+            </div>
+            <div class="col-md-5">
+              <input
+                class="form-control"
+                id="t11"
+                name="t11"
+                type="text"
+                size="40"
+              />
+            </div>
+
+            <div class="col-md-12">
+              <h3>
+                3.3 Legal Guardian's Given Name (If applicable) (Initials not
+                allowed)
+              </h3>
+            </div>
+            <div class="col-md-5">
+              <input
+                class="form-control"
+                id="t12"
+                name="t12"
+                type="text"
+                size="40"
+              />
+            </div>
+
+            <div class="col-md-12">
+              <h3>
+                3.4 Spouse's Given Name (Given Name means First name followed by
+                Middle name (If any)) (Initials not allowed)
+              </h3>
+            </div>
+            <div class="col-md-5">
+              <input
+                class="form-control"
+                id="t13"
+                name="t13"
+                type="text"
+                size="40"
+              />
+            </div>
+
+            <div class="col-md-12">
+              <h3>
+                3.5 If applicant is minor, provide following details Parent's
+                Passport Details (If passport has been applied for but not
+                received, give File Number)
+              </h3>
+            </div>
+            <div class="col-md-6">
+              <h3>Father/ Legal Guardian's File/ Passport Number</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t14"
+                  name="t14"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3>Father/ Legal Guardian's Nationality, if not Indian</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t15"
+                  name="t15"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Mother/ Legal Guardian's File/ Passport Number</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t16"
+                  name="t16"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3>Mother/ Legal Guardian's Nationality, if not Indian</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t17"
+                  name="t17"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>
+                4. Present Residential Address Details (Where applicant
+                presently resides)
+              </h3>
+            </div>
+            <div class="col-md-6">
+              <h3>4.1 House No. and Street Name</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t18"
+                  name="t18"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Village or Town or City</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t19"
+                  name="t19"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>District</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t20"
+                  name="t20"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Police Station</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t21"
+                  name="t21"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>State/ UT</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t22"
+                  name="t22"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>PIN</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t23"
+                  name="t23"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Mobile Number</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t24"
+                  name="t24"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Telephone Number</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t25"
+                  name="t25"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>E-mail ID</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>4.2 Is permanent address same as present address?</h3>
+              <p>If no, provide details in Column 4 of Supplementary Form</p>
+              <label for="r14[]" class="error"></label>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input
+                  id="perm_yes"
+                  name="r14[]"
+                  type="radio"
+                  onclick="final()"
+                />
+                Yes
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input
+                  id="perm_no"
+                  name="r14[]"
+                  type="radio"
+                  onclick="final()"
+                />
+                No
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>5. Emergency Contact Details</h3>
+            </div>
+            <div class="col-md-12">
+              <h3>
+                Name and Address (Mention address only if different from present
+                residential address)
+              </h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t26"
+                  name="t26"
+                  type="text"
+                  size="40"
+                  disabled
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Mobile Number</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t27"
+                  name="t27"
+                  type="text"
+                  size="40"
+                  disabled
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Telephone Number</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t28"
+                  name="t28"
+                  type="text"
+                  size="40"
+                  disabled
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>E-mail ID</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t29"
+                  name="t29"
+                  type="text"
+                  size="40"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>6. Previous Passport/ Application Details</h3>
+            </div>
+            <div class="col-md-12">
+              <h3>
+                6.1 Details of latest held/ existing/ lost/ damaged Ordinary
+                Passport/ Identity Certificate
+              </h3>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Passport/ Identity Certificate Number</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t30"
+                  name="t30"
+                  type="text"
+                  size="40"
+                  disabled
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3>Place of Issue</h3>
+              <!-- <label for="t31" class="error"></label> -->
+
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t31"
+                  name="t31"
+                  type="text"
+                  size="40"
+                  disabled
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Date of Issue (DD-MM-YYYY)</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="date2"
+                  name="date2"
+                  type="date"
+                  disabled
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3>Date of Expiry (DD-MM-YYYY)</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="date3"
+                  name="date3"
+                  type="date"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>6.2 Have you ever applied for passport, but not issued?</h3>
+              <p>(If yes, provide the following details)</p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r15[]" type="radio" id="r15" onclick="final()" />
+                Yes
+              </p>
+            </div>
+            <div class="col-md-2">
+              <p style="font-size: 18px">
+                <input name="r15[]" type="radio" id="r16" onclick="final()" />
+                No
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="col-md-6">
+              <h3>File Number</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  name="f1"
+                  id="f1"
+                  type="text"
+                  size="40"
+                  disabled
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Month and Year of applying</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  name="m1"
+                  id="m1"
+                  type="month"
+                  size="40"
+                  disabled
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3>Name of passport office where applied</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  name="n1"
+                  id="n1"
+                  type="text"
+                  size="40"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="text-justify" class="row">
+            <div class="col-12">
+              <h3>7. Other details</h3>
+            </div>
+            <div class="col-md-12">
+              <h3>
+                <b>
+                  7.1 Provide the following details if there are any criminal
+                  proceedings pending against the applicant.</b
+                >
+              </h3>
+            </div>
+            <div class="col-12">
+              <div class="col-md-12">
+                <h3>
+                  7.1.1 Are any proceedings in respect of an offence alleged to
+                  have been committed by you pending before a criminal court in
+                  India? If yes, fill Column 6.1 of Supplementary Form
+                </h3>
+                <label for="r16" class="error"></label>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r16" type="radio" /> Yes
+                </p>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r16" type="radio" /> No
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="col-md-12">
+                <h3>
+                  7.1.2 Has any warrant or summons for your appearance been
+                  issued & pending before a court under any law for the time
+                  being in force? If yes, fill Column 6.2 of Supplementary Form
+                </h3>
+                <label for="r17" class="error"></label>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r17" type="radio" /> Yes
+                </p>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r17" type="radio" /> No
+                </p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="col-md-12">
+                <h3>
+                  7.1.3 Has a warrant for your arrest been issued by a court
+                  under any law for the time being in force? If yes, fill Column
+                  6.3 of Supplementary Form
+                </h3>
+                <label for="r18" class="error"></label>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r18" type="radio" /> Yes
+                </p>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r18" type="radio" /> No
+                </p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="col-md-12">
+                <h3>
+                  7.1.4 Has an order prohibiting your departure from India been
+                  made by any court? If yes, fill Column 6.4 of Supplementary
+                  Form
+                </h3>
+                <label for="r19" class="error"></label>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r19" type="radio" /> Yes
+                </p>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r19" type="radio" /> No
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <h3>
+                <b>
+                  7.2 Provide the following details if the applicant has been
+                  convicted by a court in India.
+                </b>
+              </h3>
+            </div>
+            <div class="col-12">
+              <div class="col-md-12">
+                <h3>
+                  7.2.1 Have you, at any time during the period of five years
+                  immediately preceding the date of this application, been
+                  convicted by a court in India for any offence involving moral
+                  turpitude and sentenced in respect thereof to imprisonment for
+                  not less than two years? If yes, fill Column 6.5 of
+                  Supplementary Form
+                </h3>
+                <label for="r20" class="error"></label>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r20" type="radio" /> Yes
+                </p>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r20" type="radio" /> No
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <h3>
+                <b>
+                  7.3 Provide the following details if the applicant has been
+                  refused/denied passport.</b
+                >
+              </h3>
+            </div>
+            <div class="col-12">
+              <div class="col-md-12">
+                <h3>
+                  7.3.1 Have you ever been refused/denied passport? If yes, fill
+                  Column 6.6 of Supplementary Form
+                </h3>
+                <label for="r21" class="error"></label>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r21" type="radio" /> Yes
+                </p>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r21" type="radio" /> No
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="col-md-12">
+                <h3>
+                  7.3.2 Has your passport ever been impounded? If yes, fill
+                  Column 6.7 of Supplementary Form
+                </h3>
+                <label for="r22" class="error"></label>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r22" type="radio" /> Yes
+                </p>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r22" type="radio" /> No
+                </p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="col-md-12">
+                <h3>
+                  7.3.3 Has your passport ever been revoked? If yes, fill Column
+                  6.8 of Supplementary Form
+                </h3>
+                <label for="r23" class="error"></label>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r23" type="radio" /> Yes
+                </p>
+              </div>
+              <div class="col-md-2">
+                <p style="font-size: 18px">
+                  <input name="r23" type="radio" /> No
+                </p>
+              </div>
+
+              <div class="col-md-12">
+                <h3>
+                  <b>
+                    7.4 Provide the following details if applicant has applied
+                    for or been granted foreign citizenship.</b
+                  >
+                </h3>
+              </div>
+              <div class="col-12">
+                <div class="col-md-12">
+                  <h3>
+                    7.4.1 Have you ever been granted citizenship by any other
+                    region/country? If yes, fill Column 6.9 of Supplementary
+                    Form
+                  </h3>
+                  <label for="r24" class="error"></label>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r24" type="radio" /> Yes
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r24" type="radio" /> No
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="col-md-12">
+                  <h3>
+                    7.4.2 Have you ever held the passport of any other
+                    region/country at any time? If yes, fill Column 6.10 of
+                    Supplementary Form
+                  </h3>
+                  <label for="r25" class="error"></label>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r25" type="radio" /> Yes
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r25" type="radio" /> No
+                  </p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="col-md-12">
+                  <h3>
+                    7.4.3 Have you ever surrendered your Indian passport? If
+                    yes, fill Column 6.11 of Supplementary Form
+                  </h3>
+                  <label for="r26" class="error"></label>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r26" type="radio" /> Yes
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r26" type="radio" /> No
+                  </p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="col-md-12">
+                  <h3>
+                    7.4.4 Have you ever applied for renunciation of Indian
+                    citizenship? If yes, fill Column 6.12 of Supplementary Form
+                  </h3>
+                  <label for="r27" class="error"></label>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r27" type="radio" /> Yes
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r27" type="radio" /> No
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <h3>
+                  <b>
+                    7.5 Provide the following details if applicant has returned
+                    to India on Emergency Certificate.</b
+                  >
+                </h3>
+              </div>
+              <div class="col-12">
+                <div class="col-md-12">
+                  <h3>
+                    7.5.1 Have you ever returned to India on Emergency
+                    Certificate (EC)? If yes, fill Column 6.13 of Supplementary
+                    Form
+                  </h3>
+                  <label for="r28" class="error"></label>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r28" type="radio" /> Yes
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r28" type="radio" /> No
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="col-md-12">
+                  <h3>
+                    7.5.2 Have you ever been deported from any country? If yes,
+                    was the cost borne by the Government of India and if so, has
+                    the same been refunded?
+                  </h3>
+                  <label for="r29" class="error"></label>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r29" type="radio" /> Yes
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r29" type="radio" /> No
+                  </p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="col-md-12">
+                  <h3>
+                    7.5.3 Have you ever been repatriated from any country back
+                    to India? If yes, was the cost borne by the Government of
+                    India and if so, has the same been refunded?
+                  </h3>
+                  <label for="r30" class="error"></label>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r30" type="radio" /> Yes
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <p style="font-size: 18px">
+                    <input name="r30" type="radio" /> No
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>
+                8. Fee Details (Not to be filled by applicants submitting the
+                application at Passport Seva Kendra)
+              </h3>
+            </div>
+            <div class="col-md-12">
+              <h3>8.1 Fee amount in (Rs)</h3>
+              <div class="col-md-5">
+                <input
+                  class="form-control"
+                  name="t32"
+                  id="t32"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <h3>
+                8.2 If paid by Demand Draft (DD), provide the following details
+              </h3>
+            </div>
+            <div class="col-md-6">
+              <h3>DD Number</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t33"
+                  name="t33"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3>DD Issue Date</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="date4"
+                  name="date4"
+                  type="date"
+                  size="40"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3>DD Expiry Date</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="date5"
+                  name="date5"
+                  type="date"
+                  size="40"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Bank Name</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t34"
+                  name="t34"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Branch</h3>
+              <div class="col-md-10">
+                <input
+                  class="form-control"
+                  id="t35"
+                  name="t35"
+                  type="text"
+                  size="40"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3>9. Enclosures</h3>
+            </div>
+
+            <div class="col-md-5">
+              <input class="form-control" id="" type="file" size="40" />
+            </div>
+
+            <div class="col-md-5">
+              <input class="form-control" id="" type="file" size="40" />
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <h3>10. Self Declaration</h3>
+            </div>
+            <div class="col-md-12">
+              <p class="text-justify" style="font-size: 18px">
+                I owe allegiance to the sovereignty, unity & integrity of India,
+                and have not voluntarily acquired citizenship or travel document
+                of any other country. I have not lost, surrendered or been
+                deprived of the citizenship of India. I have not contravened any
+                of the conditions relating to the possession and use of an
+                Indian passport.
+              </p>
+
+              <p class="text-justify" style="font-size: 18px">
+                I affirm that the information and particulars given by me in
+                this form are true and correct. I further state that I am not
+                suppressing any material information in this regard. I further
+                affirm that the enclosures and documentary proof submitted in
+                support of my application for an Indian passport are authentic
+                and solely pertain to me and I am fully responsible for the
+                accuracy of the same. I am liable to be penalized or prosecuted
+                if found otherwise. I am aware that under the Passports Act,
+                1967 it is a criminal offence to furnish any false information
+                or to suppress any material information with a view to obtaining
+                passport or travel document.
+              </p>
+
+              <p class="text-justify" style="font-size: 18px">
+                I have read and understood the contents of the above and by
+                submitting this form certify that all the information submitted
+                by me in the form is bonafide.
+              </p>
+            </div>
+
+            <div class="col-md-12">
+              <h3>Place</h3>
+            </div>
+
+            <div class="col-md-4">
+              <input class="form-control" id="t36" name="t36" type="text" />
+            </div>
+
+            <div class="col-md-12">
+              <h3>Date (DD-MM-YYYY)</h3>
+            </div>
+            <div class="col-md-4">
+              <input class="form-control" name="date6" id="date6" type="date" />
+            </div>
+          </div>
+        </div>
+        <br /><br />
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <!-- your content goes here  -->
+            </div>
+            <div class="col-md-5">
+              <input class="btn btn-success" type="submit" value="Submit" />
+              <br /><br /><br />
+              <br /><br /><br />
+
+              <!-- <button
+                id="submit-button"
+                onclick="return final()"
+                class="btn btn-success"
+              >
+                submit
+              </button> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- <div>
+        
+          <p><a style="color: red; font-size: 20px;" href="#aa" id="er1"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#ac" id="er2"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#ca" id="er3"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#file" id="er4"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#sign" id="er5"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#ba" id="er6"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#bc" id="er7"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#be" id="er8"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#t3" id="er9"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#bg" id="er10"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#bi" id="er11"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#date1" id="er12"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#t4" id="er13"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#" id="er14"></a></p>
+          <p><a style="color: red; font-size: 20px;" href="#" id="er15"></a></p>
+
+        
+        
+        
+        
+        
+        
+        
+        </div> -->
+
+        <br />
+      </div>
+    </form>
+    <br /><br /><br />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+    <!-- <script src="script.js"></script> -->
+
+    <script src="/jquery.js"></script>
+  </body>
+</html>
